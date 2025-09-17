@@ -10,7 +10,7 @@
     :root{
       --brand-deep: #0B3B60;   /* accents for non-hero sections */
       --brand-aqua: #30B2C8;   /* buttons */
-      --text-dark:  #0f172a;   /* body text on light */
+      --text-dark:  #0a0a0a;   /* body text on light (darker) */
       --text-light: #ffffff;   /* text on hero */
       /* Set your hero background image here (no overlay added) */
       --hero-image: url('https://raw.githubusercontent.com/anthonyconger/sierrapacificpools/main/Crashing-Waves.jpg');
@@ -18,10 +18,16 @@
     }
 
     *{box-sizing:border-box}
-    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    html,body{margin:0}
+    body{
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.5;
+      font-size:17px;
+      color:var(--text-dark);
+    }
     a{color:inherit}
     img{max-width:100%;display:block}
-    .container{max-width:1100px;margin:0 auto;padding:16px}
+    .container{max-width:1080px;margin:0 auto;padding:12px 16px}
 
     /* Header */
     header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid #e5e7eb}
@@ -32,29 +38,31 @@
     .btn{display:inline-block;background:var(--brand-aqua);color:#fff;font-weight:800;border:none;border-radius:12px;padding:12px 16px;text-decoration:none;cursor:pointer}
     .btn.outline{background:transparent;border:2px solid #fff;color:#fff} /* white outline for hero */
 
+    /* Headings & text */
+    h1,h2,h3{font-weight:800;letter-spacing:-0.5px;margin:0 0 8px}
+    h1{font-size:48px}
+    h2{font-size:28px;margin-bottom:12px}
+    h3{font-size:22px}
+    p,li,label{font-size:16px;font-weight:500;color:#1e293b}
+
     /* Hero (NO OVERLAY, pure image) */
     .hero{
       min-height:82vh;display:grid;align-items:center;text-align:center;color:var(--text-light);
       background: var(--hero-image);
       background-size:cover; background-position:center; background-repeat:no-repeat;
     }
-    .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}
-    .hero p{opacity:1;margin:0 0 16px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.30)}
-    @media(min-width:800px){ .hero h1{font-size:56px} }
-
+    .hero h1{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+    .hero p{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.30);margin:0 0 16px}
     .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;justify-content:center}
 
     /* Layout */
-    .grid{display:grid;gap:18px}
+    .grid{display:grid;gap:22px}
     @media(min-width:900px){ .grid-2{grid-template-columns:1.1fr .9fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
 
     /* Cards & form */
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px}
-    h2{margin:0 0 8px 0;color:var(--text-dark)}
-    p, li, label{color:#475569}
-    ul{margin:0;padding-left:18px}
+    .card{background:#fff;border:1px solid #d1d5db;border-radius:14px;padding:22px}
     label{display:block;font-size:13px;margin:8px 0 4px}
-    input, textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px}
+    input,textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px}
     textarea{min-height:110px}
 
     /* Pills (white text over hero) */
@@ -63,7 +71,7 @@
 
     /* Cities list (SEO helper) */
     .cities{display:flex;flex-wrap:wrap;gap:8px}
-    .cities span{font-size:13px;border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;color:#0b3b60;background:#fff}
+    .cities span{font-size:14px;font-weight:600;border:1px solid #e5e7eb;border-radius:999px;padding:10px 14px;color:#0b3b60;background:#fff}
 
     footer{color:#64748b;font-size:13px;padding:26px 0}
   </style>
@@ -109,7 +117,7 @@
       <div class="card">
         <h2>Request a Call Back</h2>
         <p>Get a free estimate. We’ll contact you within 24 hours.</p>
-        <form action="mailto:conger.ant@gmail.com" method="POST" enctype="text/plain">
+        <form action="mailto:sierrapacificpools@gmail.com" method="POST" enctype="text/plain">
           <label>Name *</label>
           <input name="Name" required />
           <label>Phone *</label>
@@ -160,7 +168,7 @@
     <!-- Contact -->
     <section id="contact" class="card" style="margin-top:18px">
       <h2>Contact</h2>
-      <p>Phone: <a href="tel:+17074388830">(707) 438-8830</a> · Email: <a href="mailto:conger.ant@gmail.com">conger.ant@gmail.com</a></p>
+      <p>Phone: <a href="tel:+17074388830">(707) 438-8830</a> · Email: <a href="mailto:sierrapacificpools@gmail.com">sierrapacificpools@gmail.com</a></p>
     </section>
   </main>
 
