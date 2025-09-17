@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pool Cleaning & Maintenance in Orange County | Sierra Pacific Pools</title>
+  <meta name="description" content="Sierra Pacific Pools provides professional pool cleaning, weekly maintenance, chemical balancing, and repairs across Orange County — from Irvine to San Clemente. Call (707) 438-8830 or request a call back." />
+  <style>
+    :root{
+      --deep:#0b3b60;      /* deep ocean/navy (top) */
+      --mid:#0e6e8c;       /* teal-blue */
+      --aqua:#1fb6c9;      /* bright aqua (CTA) */
+      --foam:#98e0ef;      /* light seafoam (bottom) */
+      --text:#0f172a;      /* very dark text for light sections */
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:16px}
+    .btn{display:inline-block;background:var(--aqua);color:#fff;font-weight:800;border:none;border-radius:12px;padding:12px 16px;text-decoration:none}
+    .btn.outline{background:transparent;border:2px solid var(--deep);color:var(--deep)}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid #e5e7eb}
+    header .row{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px}
+    .badge{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--deep),var(--aqua))}
+    .brand{font-weight:900;color:var(--deep)}
+    .hero{
+      min-height:86vh;display:grid;align-items:center;
+      background:linear-gradient(180deg,var(--deep) 0%, #106988 30%, #1aa5b9 60%, var(--foam) 100%);
+      color:#fff; text-align:center;
+    }
+    .hero h1{font-size:38px;line-height:1.1;margin:0 0 10px}
+    .hero p{opacity:.95;margin:0 0 16px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:800px){ .grid-2{grid-template-columns:1.1fr .9fr} .grid-3{grid-template-columns:repeat(3,1fr)} .hero h1{font-size:54px} }
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:16px}
+    h2{margin:0 0 8px 0;color:var(--text)}
+    p{color:#475569}
+    label{display:block;font-size:13px;color:#475569;margin:8px 0 4px}
+    input,textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px}
+    textarea{min-height:110px}
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{font-size:12px;border:1px solid #cfe7ff;color:#0b3b60;background:#e6f4ff;border-radius:999px;padding:6px 10px}
+    .cities{display:flex;flex-wrap:wrap;gap:8px}
+    .cities a{font-size:13px;text-decoration:none;border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;color:#0b3b60;background:#fff}
+    footer{color:#64748b;font-size:13px;padding:26px 0}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container row">
+      <div class="logo">
+        <div class="badge">SP</div>
+        <div class="brand">Sierra Pacific Pools</div>
+      </div>
+      <a class="btn" href="tel:+17074388830">Call (707) 438-8830</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Reliable Pool Service in Irvine & Beyond</h1>
+      <p>Professional pool cleaning, weekly maintenance, chemical balancing, and repairs.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px">
+        <a class="btn" href="tel:+17074388830">CALL NOW: (707) 438-8830</a>
+        <a class="btn outline" href="#contact">Request a Call Back</a>
+      </div>
+      <div class="pillrow" style="justify-content:center;margin-top:10px">
+        <span class="pill">Licensed & Insured</span>
+        <span class="pill">Residential & Commercial</span>
+        <span class="pill">Orange County</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="margin-top:-60px">
+    <!-- Lead form -->
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>Request a Call Back</h2>
+        <p>Get a free estimate. Our team will contact you within 24 hours.</p>
+        <form action="mailto:conger.ant@gmail.com" method="POST" enctype="text/plain">
+          <label>Name *</label>
+          <input name="Name" required />
+          <label>Phone *</label>
+          <input name="Phone" required />
+          <label>Message</label>
+          <textarea name="Message" placeholder="Tell us your pool needs (optional)"></textarea>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <button class="btn" type="submit">Send Request</button>
+            <a class="btn outline" href="tel:+17074388830">Call Now</a>
+          </div>
+          <p style="font-size:12px;color:#94a3b8;margin-top:8px">
+            Tip: We can switch this to Formspree later if you want submissions to go to a dashboard.
+          </p>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Weekly pool cleaning & skimming</li>
+          <li>Equipment inspections & repairs</li>
+          <li>Chemical testing & balancing</li>
+          <li>Filter cleaning & replacement</li>
+          <li>One-time cleanings for events</li>
+          <li>Commercial pool service</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Service areas -->
+    <section class="card" style="margin-top:18px">
+      <h2>Service Areas</h2>
+      <p>We proudly serve Orange County communities from Irvine to San Clemente.</p>
+      <div class="cities">
+        <a>Irvine</a><a>Lake Forest</a><a>Mission Viejo</a><a>Laguna Hills</a>
+        <a>Aliso Viejo</a><a>Ladera Ranch</a><a>Laguna Niguel</a><a>Dana Point</a>
+        <a>San Juan Capistrano</a><a>Laguna Beach</a><a>Newport Beach</a>
+        <a>San Clemente</a><a>Coto De Caza</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="card" style="margin-top:18px">
+      <h2>About Us</h2>
+      <p>Sierra Pacific Pools is a family-owned local business focused on reliability and clear communication. Whether you need weekly service or a one-time clean, we keep your pool sparkling and safe year-round.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2>Contact</h2>
+      <p>Phone: <a href="tel:+17074388830">(707) 438-8830</a> · Email: <a href="mailto:conger.ant@gmail.com">conger.ant@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> Sierra Pacific Pools. All rights reserved.
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
