@@ -16,59 +16,77 @@ export default function HomePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Handle form submission
     console.log('Form submitted:', formData);
+    // Reset form
     setFormData({ name: '', phone: '', message: '' });
   };
 
   const services = [
-    { icon: <Calendar className="w-8 h-8" />, title: "Weekly Pool Cleaning", description: "Comprehensive weekly maintenance including skimming, vacuuming, brushing, and chemical testing to keep your pool crystal clear." },
-    { icon: <Wrench className="w-8 h-8" />, title: "Equipment Repairs", description: "Professional repair and maintenance of pool pumps, filters, heaters, and automation systems by licensed technicians." },
-    { icon: <Droplets className="w-8 h-8" />, title: "Chemical Balancing", description: "Expert water chemistry management to ensure safe, balanced water that protects your pool and your family's health." },
-    { icon: <CheckCircle className="w-8 h-8" />, title: "One-Time Cleanings", description: "Deep cleaning services for special events, seasonal openings, or when your pool needs extra attention." },
-    { icon: <Building className="w-8 h-8" />, title: "Commercial Pool Service", description: "Reliable maintenance for hotels, apartments, community centers, and commercial properties throughout Orange County." }
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: "Weekly Pool Cleaning",
+      description: "Comprehensive weekly maintenance including skimming, vacuuming, brushing, and chemical testing to keep your pool crystal clear."
+    },
+    {
+      icon: <Wrench className="w-8 h-8" />,
+      title: "Equipment Repairs",
+      description: "Professional repair and maintenance of pool pumps, filters, heaters, and automation systems by licensed technicians."
+    },
+    {
+      icon: <Droplets className="w-8 h-8" />,
+      title: "Chemical Balancing",
+      description: "Expert water chemistry management to ensure safe, balanced water that protects your pool and your family's health."
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "One-Time Cleanings",
+      description: "Deep cleaning services for special events, seasonal openings, or when your pool needs extra attention."
+    },
+    {
+      icon: <Building className="w-8 h-8" />,
+      title: "Commercial Pool Service",
+      description: "Reliable maintenance for hotels, apartments, community centers, and commercial properties throughout Orange County."
+    }
   ];
 
   const serviceCities = [
-    "Irvine","Lake Forest","Mission Viejo","Laguna Hills","Aliso Viejo",
-    "Ladera Ranch","Laguna Niguel","Dana Point","San Juan Capistrano",
-    "Laguna Beach","Newport Beach","San Clemente","Coto De Caza"
+    "Irvine", "Lake Forest", "Mission Viejo", "Laguna Hills", "Aliso Viejo",
+    "Ladera Ranch", "Laguna Niguel", "Dana Point", "San Juan Capistrano",
+    "Laguna Beach", "Newport Beach", "San Clemente", "Coto De Caza"
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-paragraph">
-      {/* Hero Section (COLORWAY UPDATED) */}
+      {/* Hero Section */}
       <section className="h-screen grid place-items-center relative overflow-hidden">
-        {/* ocean gradient: deep navy → teal → aqua → seafoam */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B3B60] via-[#0E6E8C] via-60% to-[#A6E1F5]"></div>
-
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-gray-900 to-background"></div>
         <div className="relative z-10 text-center max-w-6xl mx-auto px-8">
-          <motion.h1
-            className="text-7xl md:text-8xl lg:text-9xl font-heading font-bold text-white mb-8"
+          <motion.h1 
+            className="text-7xl md:text-8xl lg:text-9xl font-heading font-bold text-foreground mb-8"
             initial={{ opacity: 0, y: -50, filter: 'blur(20px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             SIERRA PACIFIC POOLS
           </motion.h1>
-
-          <motion.p
-            className="text-2xl md:text-3xl text-white/90 mb-12 font-paragraph"
+          <motion.p 
+            className="text-2xl md:text-3xl text-gray-300 mb-12 font-paragraph"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             Your Trusted Pool Care Partner
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Button
-              size="lg"
-              className="bg-[#30B2C8] text-white hover:bg-[#28a6bb] text-xl px-12 py-6 font-bold"
-              onClick={() => window.open('tel:17074388830')}
+            <Button 
+              size="lg" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-12 py-6 font-bold"
+              onClick={() => window.open('tel:7074388830')}
             >
               <Phone className="w-6 h-6 mr-3" />
               CALL NOW: (707) 438-8830
@@ -86,12 +104,11 @@ export default function HomePage() {
                 REQUEST A CALL BACK
               </h2>
               <p className="text-xl text-gray-300 font-paragraph leading-relaxed">
-                Get a free estimate for your pool cleaning and maintenance needs.
+                Get a free estimate for your pool cleaning and maintenance needs. 
                 Our licensed professionals will contact you within 24 hours.
               </p>
             </div>
-
-            <Card className="bg-background border-2 border-[#30B2C8] p-8">
+            <Card className="bg-background border-2 border-primary p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
@@ -105,7 +122,6 @@ export default function HomePage() {
                     className="bg-gray-800 border-gray-600 text-foreground"
                   />
                 </div>
-
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
                     PHONE NUMBER *
@@ -118,7 +134,6 @@ export default function HomePage() {
                     className="bg-gray-800 border-gray-600 text-foreground"
                   />
                 </div>
-
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
                     MESSAGE
@@ -130,10 +145,9 @@ export default function HomePage() {
                     placeholder="Tell us about your pool service needs..."
                   />
                 </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-[#30B2C8] text-white hover:bg-[#28a6bb] py-4 text-lg font-bold"
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-4 text-lg font-bold"
                 >
                   SEND REQUEST
                 </Button>
@@ -151,11 +165,11 @@ export default function HomePage() {
               OUR SERVICES
             </h2>
             <p className="text-xl text-gray-300 font-paragraph max-w-4xl mx-auto">
-              Professional pool cleaning and maintenance services throughout Orange County.
+              Professional pool cleaning and maintenance services throughout Orange County. 
               Licensed, insured, and trusted by families and businesses.
             </p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -165,8 +179,10 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gray-900 border-2 border-gray-700 hover:border-[#30B2C8] transition-colors p-8 h-full">
-                  <div className="text-[#30B2C8] mb-6">{service.icon}</div>
+                <Card className="bg-gray-900 border-2 border-gray-700 hover:border-primary transition-colors p-8 h-full">
+                  <div className="text-primary mb-6">
+                    {service.icon}
+                  </div>
                   <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
                     {service.title}
                   </h3>
@@ -191,7 +207,7 @@ export default function HomePage() {
               Proudly serving Orange County communities with reliable pool care
             </p>
           </div>
-
+          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {serviceCities.map((city, index) => (
               <motion.div
@@ -200,18 +216,20 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-background border-2 border-[#30B2C8] p-6 text-center hover:bg-[#30B2C8] hover:text-white transition-colors"
+                className="bg-background border-2 border-primary p-6 text-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <MapPin className="w-6 h-6 mx-auto mb-3" />
-                <h3 className="text-lg font-heading font-bold">{city}</h3>
+                <h3 className="text-lg font-heading font-bold">
+                  {city}
+                </h3>
               </motion.div>
             ))}
           </div>
-
+          
           <div className="mt-16 text-center">
             <p className="text-lg text-gray-300 font-paragraph">
               Don't see your city? Call us at{' '}
-              <a href="tel:17074388830" className="text-[#30B2C8] hover:underline font-bold">
+              <a href="tel:7074388830" className="text-primary hover:underline font-bold">
                 (707) 438-8830
               </a>{' '}
               - we may service your area!
@@ -229,29 +247,40 @@ export default function HomePage() {
                 ABOUT US
               </h2>
               <div className="space-y-6 text-lg text-gray-300 font-paragraph leading-relaxed">
-                <p>Sierra Pacific Pools is a family-owned pool service company dedicated to providing reliable, professional pool cleaning and maintenance throughout Orange County, California.</p>
-                <p>With years of experience in the industry, we understand that your pool is more than just a luxury - it's where your family creates memories. That's why we treat every pool with the same care and attention we'd give our own.</p>
-                <p>We're fully licensed and insured, giving you peace of mind while we keep your pool sparkling clean and ready for enjoyment year-round.</p>
+                <p>
+                  Sierra Pacific Pools is a family-owned pool service company dedicated to 
+                  providing reliable, professional pool cleaning and maintenance throughout 
+                  Orange County, California.
+                </p>
+                <p>
+                  With years of experience in the industry, we understand that your pool is 
+                  more than just a luxury - it's where your family creates memories. That's 
+                  why we treat every pool with the same care and attention we'd give our own.
+                </p>
+                <p>
+                  We're fully licensed and insured, giving you peace of mind while we keep 
+                  your pool sparkling clean and ready for enjoyment year-round.
+                </p>
               </div>
-
+              
               <div className="mt-12 grid grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-[#30B2C8] mb-2">100%</div>
+                  <div className="text-3xl font-heading font-bold text-primary mb-2">100%</div>
                   <div className="text-sm text-gray-400 font-paragraph">LICENSED & INSURED</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-[#30B2C8] mb-2">24/7</div>
+                  <div className="text-3xl font-heading font-bold text-primary mb-2">24/7</div>
                   <div className="text-sm text-gray-400 font-paragraph">EMERGENCY SERVICE</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-[#30B2C8] mb-2">5★</div>
+                  <div className="text-3xl font-heading font-bold text-primary mb-2">5★</div>
                   <div className="text-sm text-gray-400 font-paragraph">CUSTOMER RATED</div>
                 </div>
               </div>
             </div>
-
+            
             <div className="relative">
-              <div className="bg-[#30B2C8]/20 p-8 border-2 border-[#30B2C8]">
+              <div className="bg-primary/20 p-8 border-2 border-primary">
                 <Image
                   src="https://static.wixstatic.com/media/2a94d0_3eb3bafa287e4e8187618b90e31d4e6f~mv2.png?originWidth=576&originHeight=384"
                   alt="Professional pool cleaning service in Orange County"
@@ -275,61 +304,92 @@ export default function HomePage() {
               Ready to get started? Contact Sierra Pacific Pools today for reliable pool service.
             </p>
           </div>
-
+          
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <div className="flex items-center space-x-4">
-                <div className="bg-[#30B2C8] p-4">
-                  <Phone className="w-8 h-8 text-white" />
+                <div className="bg-primary p-4">
+                  <Phone className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
                   <h3 className="text-xl font-heading font-bold text-foreground mb-1">PHONE</h3>
-                  <a href="tel:17074388830" className="text-lg text-[#30B2C8] hover:underline font-paragraph">
+                  <a href="tel:7074388830" className="text-lg text-primary hover:underline font-paragraph">
                     (707) 438-8830
                   </a>
                 </div>
               </div>
-
+              
               <div className="flex items-center space-x-4">
-                <div className="bg-[#30B2C8] p-4">
-                  <Mail className="w-8 h-8 text-white" />
+                <div className="bg-primary p-4">
+                  <Mail className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
                   <h3 className="text-xl font-heading font-bold text-foreground mb-1">EMAIL</h3>
-                  <a href="mailto:conger.ant@gmail.com" className="text-lg text-[#30B2C8] hover:underline font-paragraph">
+                  <a href="mailto:conger.ant@gmail.com" className="text-lg text-primary hover:underline font-paragraph">
                     conger.ant@gmail.com
                   </a>
                 </div>
               </div>
-
-              <div className="bg-background border-2 border-[#30B2C8] p-8">
+              
+              <div className="bg-background border-2 border-primary p-8">
                 <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
                   BUSINESS HOURS
                 </h3>
                 <div className="space-y-2 font-paragraph text-gray-300">
-                  <div className="flex justify-between"><span>Monday - Friday:</span><span>7:00 AM - 6:00 PM</span></div>
-                  <div className="flex justify-between"><span>Saturday:</span><span>8:00 AM - 4:00 PM</span></div>
-                  <div className="flex justify-between"><span>Sunday:</span><span>Emergency Service Only</span></div>
+                  <div className="flex justify-between">
+                    <span>Monday - Friday:</span>
+                    <span>7:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday:</span>
+                    <span>8:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday:</span>
+                    <span>Emergency Service Only</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <Card className="bg-background border-2 border-[#30B2C8] p-8">
-              <h3 className="text-2xl font-heading font-bold text-foreground mb-6">GET A FREE QUOTE</h3>
+            
+            <Card className="bg-background border-2 border-primary p-8">
+              <h3 className="text-2xl font-heading font-bold text-foreground mb-6">
+                GET A FREE QUOTE
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">NAME *</label>
-                  <Input type="text" required className="bg-gray-800 border-gray-600 text-foreground" />
+                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
+                    NAME *
+                  </label>
+                  <Input
+                    type="text"
+                    required
+                    className="bg-gray-800 border-gray-600 text-foreground"
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">PHONE NUMBER *</label>
-                  <Input type="tel" required className="bg-gray-800 border-gray-600 text-foreground" />
+                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
+                    PHONE NUMBER *
+                  </label>
+                  <Input
+                    type="tel"
+                    required
+                    className="bg-gray-800 border-gray-600 text-foreground"
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">SERVICE NEEDED</label>
-                  <Textarea className="bg-gray-800 border-gray-600 text-foreground min-h-[120px]" placeholder="Describe your pool service needs..." />
+                  <label className="block text-sm font-bold text-foreground mb-2 font-paragraph">
+                    SERVICE NEEDED
+                  </label>
+                  <Textarea
+                    className="bg-gray-800 border-gray-600 text-foreground min-h-[120px]"
+                    placeholder="Describe your pool service needs..."
+                  />
                 </div>
-                <Button type="submit" className="w-full bg-[#30B2C8] text-white hover:bg-[#28a6bb] py-4 text-lg font-bold">
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-4 text-lg font-bold"
+                >
                   REQUEST QUOTE
                 </Button>
               </form>
@@ -339,16 +399,26 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t-2 border-[#30B2C8] py-16">
+      <footer className="bg-background border-t-2 border-primary py-16">
         <div className="max-w-[100rem] mx-auto px-8">
           <div className="text-center">
-            <h3 className="text-4xl font-heading font-bold text-foreground mb-4">SIERRA PACIFIC POOLS</h3>
-            <p className="text-lg text-gray-300 font-paragraph mb-8">Professional Pool Cleaning & Maintenance in Orange County</p>
+            <h3 className="text-4xl font-heading font-bold text-foreground mb-4">
+              SIERRA PACIFIC POOLS
+            </h3>
+            <p className="text-lg text-gray-300 font-paragraph mb-8">
+              Professional Pool Cleaning & Maintenance in Orange County
+            </p>
             <div className="flex justify-center space-x-8 mb-8">
-              <a href="tel:17074388830" className="text-[#30B2C8] hover:opacity-80 transition-colors"><Phone className="w-6 h-6" /></a>
-              <a href="mailto:conger.ant@gmail.com" className="text-[#30B2C8] hover:opacity-80 transition-colors"><Mail className="w-6 h-6" /></a>
+              <a href="tel:7074388830" className="text-primary hover:text-primary/80 transition-colors">
+                <Phone className="w-6 h-6" />
+              </a>
+              <a href="mailto:conger.ant@gmail.com" className="text-primary hover:text-primary/80 transition-colors">
+                <Mail className="w-6 h-6" />
+              </a>
             </div>
-            <p className="text-sm text-gray-500 font-paragraph">© {new Date().getFullYear()} Sierra Pacific Pools. Licensed & Insured. All rights reserved.</p>
+            <p className="text-sm text-gray-500 font-paragraph">
+              © 2024 Sierra Pacific Pools. Licensed & Insured. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
