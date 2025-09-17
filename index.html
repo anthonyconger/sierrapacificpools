@@ -3,26 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pool Cleaning & Maintenance in Orange County | Sierra Pacific Pools</title>
-  <meta name="description" content="Sierra Pacific Pools offers reliable pool cleaning, weekly maintenance, chemical balancing, and repairs across Orange County. Call (707) 438-8830 or request a call back.">
+  <title>South Orange County Pool Cleaning, Weekly Maintenance & Repairs | Sierra Pacific Pools</title>
+  <meta name="description" content="Sierra Pacific Pools provides pool cleaning, weekly maintenance, chemical balancing, filter service and repairs across South Orange County — Irvine, Lake Forest, Mission Viejo, Laguna Hills, Aliso Viejo, Ladera Ranch, Laguna Niguel, Dana Point, San Juan Capistrano, Laguna Beach, Newport Beach, San Clemente, Coto De Caza. Call (707) 438-8830.">
   <style>
     /* ==== QUICK EDITS (colors, background image, logo size) ==== */
     :root{
-      --brand-deep: #0B3B60;   /* headings, accents */
+      --brand-deep: #0B3B60;   /* accents for non-hero sections */
       --brand-aqua: #30B2C8;   /* buttons */
       --text-dark:  #0f172a;   /* body text on light */
       --text-light: #ffffff;   /* text on hero */
-      /* To use a photo in the hero background, set the URL below */
-      /* Example: url('https://your-image-url.jpg') */
-     --hero-image: url('https://raw.githubusercontent.com/anthonyconger/sierrapacificpools/main/Crashing-Waves.jpg');
-      --logo-width: 44px; /* adjust your logo size */
+      /* Set your hero background image here (no overlay added) */
+      --hero-image: url('https://raw.githubusercontent.com/anthonyconger/sierrapacificpools/main/Crashing-Waves.jpg');
+      --logo-width: 88px; /* doubled size */
     }
 
     *{box-sizing:border-box}
     html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     a{color:inherit}
     img{max-width:100%;display:block}
-
     .container{max-width:1100px;margin:0 auto;padding:16px}
 
     /* Header */
@@ -32,20 +30,19 @@
     .brand img{width:var(--logo-width);height:auto;border-radius:8px;object-fit:contain;background:#fff}
     .brand-name{font-weight:900;color:var(--brand-deep)}
     .btn{display:inline-block;background:var(--brand-aqua);color:#fff;font-weight:800;border:none;border-radius:12px;padding:12px 16px;text-decoration:none;cursor:pointer}
-    .btn.outline{background:transparent;border:2px solid var(--brand-deep);color:var(--brand-deep)}
+    .btn.outline{background:transparent;border:2px solid #fff;color:#fff} /* white outline for hero */
 
-    /* Hero */
+    /* Hero (NO OVERLAY, pure image) */
     .hero{
       min-height:82vh;display:grid;align-items:center;text-align:center;color:var(--text-light);
-      /* If you set --hero-image above, it will overlay under this gradient */
-      background:
-        linear-gradient(180deg, rgba(11,59,96,.88) 0%, rgba(14,110,140,.70) 50%, rgba(160,225,245,.55) 100%),
-        var(--hero-image);
+      background: var(--hero-image);
       background-size:cover; background-position:center; background-repeat:no-repeat;
     }
-    .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px}
-    .hero p{opacity:.95;margin:0 0 16px}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+    .hero p{opacity:1;margin:0 0 16px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.30)}
     @media(min-width:800px){ .hero h1{font-size:56px} }
+
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;justify-content:center}
 
     /* Layout */
     .grid{display:grid;gap:18px}
@@ -59,13 +56,12 @@
     label{display:block;font-size:13px;margin:8px 0 4px}
     input, textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px}
     textarea{min-height:110px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
-    /* Pills */
+    /* Pills (white text over hero) */
     .pillrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
-    .pill{font-size:12px;border:1px solid #cfe7ff;color:#0b3b60;background:#e6f4ff;border-radius:999px;padding:6px 10px}
+    .pill{font-size:12px;border:1px solid #fff;color:#fff;background:transparent;border-radius:999px;padding:6px 10px}
 
-    /* Cities */
+    /* Cities list (SEO helper) */
     .cities{display:flex;flex-wrap:wrap;gap:8px}
     .cities span{font-size:13px;border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;color:#0b3b60;background:#fff}
 
@@ -77,7 +73,6 @@
   <header>
     <div class="container row">
       <div class="brand">
-        <!-- Swap this logo URL anytime -->
         <img src="https://raw.githubusercontent.com/anthonyconger/sierrapacificpools/main/sample.jpg" alt="Sierra Pacific Pools logo" id="logo">
         <div class="brand-name">Sierra Pacific Pools</div>
       </div>
@@ -88,16 +83,22 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Reliable Pool Service in Irvine & Beyond</h1>
-      <p>Professional pool cleaning, weekly maintenance, chemical balancing, and repairs.</p>
-      <div class="actions" style="justify-content:center">
+      <h1>South Orange County Pool Cleaning, Weekly Service & Repairs</h1>
+      <p>Professional pool maintenance, chemical balancing, filter cleaning and equipment repair for homes & businesses.</p>
+      <div class="actions">
         <a class="btn" href="tel:+17074388830">CALL NOW: (707) 438-8830</a>
         <a class="btn outline" href="#contact">Request a Call Back</a>
       </div>
+      <!-- Cities surfaced for SEO -->
+      <p style="margin-top:14px;color:#fff;font-weight:600">
+        Serving Irvine, Lake Forest, Mission Viejo, Laguna Hills, Aliso Viejo, Ladera Ranch, Laguna Niguel,
+        Dana Point, San Juan Capistrano, Laguna Beach, Newport Beach, San Clemente &amp; Coto De Caza.
+      </p>
       <div class="pillrow">
-        <span class="pill">Residential & Commercial</span>
-        <span class="pill">Orange County</span>
-        <span class="pill">Fast Response</span>
+        <span class="pill">Weekly Service</span>
+        <span class="pill">Chemical Balancing</span>
+        <span class="pill">Filter Cleaning</span>
+        <span class="pill">Equipment Repairs</span>
       </div>
     </div>
   </section>
@@ -108,10 +109,6 @@
       <div class="card">
         <h2>Request a Call Back</h2>
         <p>Get a free estimate. We’ll contact you within 24 hours.</p>
-
-        <!-- SIMPLE MAILTO FORM (opens your email app).
-             To use a real form service later, replace action with
-             your Formspree endpoint and remove enctype. -->
         <form action="mailto:conger.ant@gmail.com" method="POST" enctype="text/plain">
           <label>Name *</label>
           <input name="Name" required />
@@ -119,13 +116,12 @@
           <input name="Phone" required />
           <label>Message</label>
           <textarea name="Message" placeholder="Tell us your pool needs (optional)"></textarea>
-
           <div class="actions">
             <button class="btn" type="submit">Send Request</button>
-            <a class="btn outline" href="tel:+17074388830">Call Now</a>
+            <a class="btn" href="tel:+17074388830">Call Now</a>
           </div>
           <p style="font-size:12px;color:#94a3b8;margin-top:8px">
-            Tip: We can switch this to Formspree later so submissions go to a web inbox.
+            Want a dashboard for leads later? We can swap this to Formspree in one step.
           </p>
         </form>
       </div>
@@ -134,19 +130,19 @@
         <h2>Our Services</h2>
         <ul>
           <li>Weekly pool cleaning & skimming</li>
-          <li>Equipment inspections & repairs</li>
           <li>Chemical testing & balancing</li>
           <li>Filter cleaning & replacement</li>
-          <li>One-time cleanings for events</li>
+          <li>Equipment inspections & repairs</li>
+          <li>One-time deep cleanings for events & openings</li>
           <li>Commercial pool service</li>
         </ul>
       </div>
     </section>
 
-    <!-- Service areas -->
+    <!-- Service areas (kept for users + SEO) -->
     <section class="card" style="margin-top:18px">
       <h2>Service Areas</h2>
-      <p>We proudly serve Orange County communities.</p>
+      <p>We proudly serve South Orange County communities.</p>
       <div class="cities">
         <span>Irvine</span><span>Lake Forest</span><span>Mission Viejo</span><span>Laguna Hills</span>
         <span>Aliso Viejo</span><span>Ladera Ranch</span><span>Laguna Niguel</span><span>Dana Point</span>
@@ -158,7 +154,7 @@
     <!-- About -->
     <section class="card" style="margin-top:18px">
       <h2>About Us</h2>
-      <p>We’re a local Orange County pool service focused on reliability and clear communication. Whether you need weekly service or a one-time clean, we keep your pool sparkling and safe year-round.</p>
+      <p>We’re a local South Orange County pool service focused on reliability and clear communication. Whether you need weekly service or a one-time clean, we keep your pool sparkling and safe year-round.</p>
     </section>
 
     <!-- Contact -->
@@ -172,8 +168,6 @@
     © <span id="year"></span> Sierra Pacific Pools. All rights reserved.
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
